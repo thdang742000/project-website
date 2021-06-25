@@ -1,0 +1,11 @@
+﻿<div class="list-group">
+    @foreach (var nhacungcap in Model)
+    {
+        <a href="@Url.Action("HoatheoNCC", "FlowerStore", new { id = nhacungcap.MaNCC})" class="list-group-item">
+            >
+            @nhacungcap.TenNCC
+        </a>
+    }
+
+</div>
+

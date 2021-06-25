@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "HoatheoNCC";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 style="text-align:center; color: red">Hoa Theo Nhà Cung Cấp</h2>
+<div class="row">
+    @foreach (var HOA in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <a href="@Url.Action("Chitiethoa", "FlowerStore", new { id = HOA.MaHOA})">
+                    <img src="~/images/@HOA.Anhbia" width="200">
+                    <div class="caption">
+
+
+                        <h4 class="pull-right">850000đ</h4>
+                        <h4>
+                            <a href="#">@HOA.TenHOA</a>
+                        </h4>
+                    </div>
+                </a>
+                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+            </div>
+            <div class="ratings">
+                <p class="pull-right">15 reviews</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                </p>
+            </div>
+        </div>
+    }
+</div>
